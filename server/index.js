@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 8080
 
 const DIST_DIR = path.join(__dirname, '../dist')
 const HTML_FILE = path.join(DIST_DIR, 'index.html')
@@ -11,8 +11,6 @@ const mockResponse = {
     bar: 'foo',
 }
 
-app.use(express.static(DIST_DIR))
-
 app.get('/api', (req, res) => {
     res.send(mockResponse)
 })
@@ -20,6 +18,8 @@ app.get('/api', (req, res) => {
 app.get('/', (req, res) => {
     res.sendFile(HTML_FILE)
 })
+
+app.use(express.static(DIST_DIR))
 
 app.listen(port, () => {
     console.log('App listening on port: ' + port)
