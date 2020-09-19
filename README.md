@@ -1,11 +1,18 @@
 # react-node-webpack-boilerplate
 
 $ yarn install
+
 $ yarn start
+
+
+** run server **
 
 in second tab
 
 $ yarn run dev-server
+
+
+** run client **
 
 in third tab
 
