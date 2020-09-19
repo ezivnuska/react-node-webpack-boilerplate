@@ -11,6 +11,11 @@
         padding: 1rem;
         background: #600;
         height: 100%;
+
+        p {
+            line-height: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
     }
     
     @media screen and (max-width: 375px) {
