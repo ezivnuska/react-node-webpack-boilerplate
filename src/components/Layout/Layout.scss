@@ -5,10 +5,12 @@
     width: 90%;
     height: 100%;
     margin: 0 auto;
-    padding: 0.5rem 1rem;
-    
-    h1 {
-        margin: 0;
+    padding: 0.5rem 0;
+
+    #main-content {
+        padding: 1rem;
+        background: #600;
+        height: 100%;
     }
     
     @media screen and (max-width: 375px) {

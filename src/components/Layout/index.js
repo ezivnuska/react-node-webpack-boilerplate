@@ -1,13 +1,19 @@
 import React from 'react'
+import {
+    Header,
+    MyComponent,
+    MyFunctionalComponent
+} from '../'
 
-import MyComponent from '../MyComponent'
-import MyFunctionalComponent from '../MyFunctionalComponent'
+import './Layout.scss'
 
 const Layout = props => (
     <div id='layout'>
-        <h1>Website</h1>
-        <MyComponent />
-        <MyFunctionalComponent />
+        <Header title="Zach&rsquo;s Site" />
+        <div id='main-content'>
+            <MyComponent />
+            <MyFunctionalComponent />
+        </div>
     </div>
 )
 
