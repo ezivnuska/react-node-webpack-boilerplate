@@ -8,11 +8,10 @@ class MyComponent extends Component {
     constructor(props) {
         super(props)
         console.log('MyComponent props...\n', props)
-    }
-    
-    // optional react component lifecycle events
-    componentWillMount() {
-        console.log('MyComponent will mount')
+
+        this.state = {
+            
+        }
     }
     
     componentDidMount() {

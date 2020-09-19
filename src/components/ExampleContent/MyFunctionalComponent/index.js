@@ -2,7 +2,7 @@ import React from 'react'
 
 import './MyFunctionalComponent.scss'
 
-const MyFunctionalComponent = props => {
+const MyFunctionalComponent = () => {
     
     const onButtonClick = e => {
         e.preventDefault()
