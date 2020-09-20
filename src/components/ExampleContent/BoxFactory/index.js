@@ -18,6 +18,7 @@ class BoxFactory extends Component {
         const box = document.createElement('div')
         box.className = 'box'
         box.innerHTML = boxContainer.childElementCount + 1
+        box.addEventListener('click', e => this.removeBoxAtIndex(boxContainer.childElementCount - 1))
         boxContainer.appendChild(box)
         console.log('boxContainer.childElementCount', boxContainer.childElementCount)
         this.setState({ numBoxes: boxContainer.childElementCount })
@@ -32,6 +33,15 @@ class BoxFactory extends Component {
         }
     }
 
+    removeBoxAtIndex = index => {
+        console.log('getting box at index', index)
+        const boxContainer = document.getElementById('box-container')
+        const box = boxContainer.getElementsByClassName('box').item(index)
+        console.log('box', box)
+        boxContainer.removeChild(box)
+        this.setState({ numBoxes: boxContainer.childElementCount })
+    }
+
     render() {
         const { numBoxes } = this.state
         return (
@@ -40,7 +50,7 @@ class BoxFactory extends Component {
                     <button onClick={e => this.addBox(e)}>Add Box</button>
                     {numBoxes !== 0 && <button onClick={e => this.removeLastBox(e)}>Remove Last Box</button>}
                 </div>
-                <div id='box-container'></div>
+                <div id='box-container' />
             </div>
         )
     }
