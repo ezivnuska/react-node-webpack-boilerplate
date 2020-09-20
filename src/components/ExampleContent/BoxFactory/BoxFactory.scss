@@ -1,0 +1,40 @@
+#box-factory {
+    display: flex;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #fff;
+
+    #box-factory-controls {
+        flex: 1;
+        
+        button {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    #box-container {
+        display: flex;
+        flex: 2;
+        flex-flow: row wrap;
+        // border: 1px solid yellow;
+
+        .box {
+            flex: 0 0 auto;
+            margin: 0 1px 1px 0;
+            width: 24%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            // border: 1px solid #fff;
+            background: #000;
+            font-weight: 600;
+            cursor: pointer;
+
+            &:hover {
+                background: #eee;
+                color: #000;
+            }
+        }
+    }
+}
