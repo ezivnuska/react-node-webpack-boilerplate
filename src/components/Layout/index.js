@@ -1,7 +1,8 @@
 import React from 'react'
 import {
-    Header,
     ExampleContent,
+    Header,
+    MainMenu,
 } from '../'
 
 import './Layout.scss'
@@ -10,7 +11,12 @@ const Layout = () => (
     <div id='layout'>
         <Header title="Zach&rsquo;s Site" />
         <div id='main-content'>
-            <ExampleContent />
+            <aside>
+                <MainMenu />
+            </aside>
+            <main>
+                <ExampleContent />
+            </main>
         </div>
     </div>
 )
