@@ -1,20 +1,14 @@
 #main-menu {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     margin: 0;
     padding: 0;
     list-style: none;
     
     li {
-        display: inline-block;
-        flex: 1 0 auto;
+        display: block;
         text-align: center;
-        border-right: 1px solid #600;
-
-        &:last-child {
-            border-right: none;
-        }
         
         a {
             display: block;
@@ -23,26 +17,35 @@
             font-weight: 600;
             color: #600;
             background: #900;
-
+            
             &:hover {
                 background: #600;
                 color: #900;
             }
-
+            
             &:active {
                 background: #900;
             }
         }
-
-        @media screen and (min-width: 1000px) {
-            display: block;
-            width: 200px;
-            border-right: none;
-            text-align: left;
+    }
+    
+    @media screen
+    and (min-width: 376px)
+    and (max-width: 1000px) {
+        flex-direction: row;
+        
+        li {
+            flex: 1 0 auto;
+            display: inline-block;
+            border-right: 1px solid #600;
+        
+            &:last-child {
+                border-right: none;
+            }
         }
     }
 
     @media screen and (min-width: 1000px) {
-        flex-direction: column;
+        width: 200px;
     }
 }
