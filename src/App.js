@@ -1,11 +1,11 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Layout from './components/Layout'
-import './scss/main.scss'
+import { CopyLayout } from './components'
+import './scss/app.scss'
 
 const App = () => (
-  <div id='main'>
-    <Layout />
+  <div id='app'>
+    <CopyLayout />
   </div>
 )
 

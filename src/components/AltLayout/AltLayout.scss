@@ -1,0 +1,163 @@
+#alt-layout {
+    height: 100%;
+    border: 1px dotted white;
+    
+    header {
+        text-align: right;
+        border: 1px solid orange;
+        padding: 0.5rem;
+    }
+    
+    #main-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        
+        // mobile
+        aside {
+            position: absolute;
+            top: 0;
+            left: -200px;
+            width: 200px;
+            transition: all 0.25s ease-out;
+
+            &.open {
+                left: 0;
+            }
+            
+            ul {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                border: 1px solid #600;
+                
+                li {
+                    display: block;
+                    flex: 1 0 auto;
+                    border-right: 1px solid #600;
+
+                    &:last-child {
+                        border-right: none;
+                    }
+
+                    a {
+                        display: block;
+                        padding: 0.5rem 1rem;
+                        color: #fff;
+                        font-weight: 600;
+                        text-decoration: none;
+                        text-align: left;
+
+                        &:hover {
+                            background: #600;
+                        }
+                    }
+                }
+            }
+        }
+        
+        main {
+            flex: 1 0 auto;
+            background: #c00;
+            padding: 1rem 0;
+        }
+
+        // mid-size
+        @media screen and (min-width: 376px) {
+            aside {
+                flex: 0 0 auto;
+                width: 100%;
+                
+                ul {
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    border: 1px solid #600;
+
+                    &.open {
+                        left: 0;
+                    }
+                    
+                    li {
+                        display: inline-block;
+                        flex: 1 0 auto;
+                        border-right: 1px solid #600;
+        
+                        &:last-child {
+                            border-right: none;
+                        }
+        
+                        a {
+                            display: block;
+                            padding: 0.5rem 1rem;
+                            color: #fff;
+                            font-weight: 600;
+                            text-decoration: none;
+                            text-align: center;
+
+                            &:hover {
+                                background: #600;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            main {
+                flex: 1 0 auto;
+                background: #c00;
+            }
+        }
+
+        // large screen
+        @media screen and (min-width: 1000px) {
+            flex-direction: row;
+
+            aside {
+                flex: 0 0 auto;
+                width: 200px;
+
+                ul {
+                    display: block;
+                    position: relative;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    border: none;
+                    
+                    &.open {
+                        left: 0;
+                    }
+
+                    li {
+                        display: block;
+                        border-right: none;
+        
+                        a {
+                            display: block;
+                            padding: 0.5rem 1rem;
+                            color: #fff;
+                            font-weight: 600;
+                            text-decoration: none;
+        
+                            &:hover {
+                                background: #600;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            main {
+                flex: 1 0 auto;
+                background: #c00;
+            }
+        }
+    }
+}
